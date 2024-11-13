@@ -30,7 +30,7 @@ fun rememberNativeAdUiWidget(
     activity: Activity,
     placementKey: String,
     adKey: String,
-    adLayout: String,
+    adLayout: LayoutInfo,
     showShimmerLayout: ShimmerInfo = ShimmerInfo.GivenLayout(),
     adsWidgetData: AdsWidgetData? = null,
     requestNewOnShow: Boolean = false,
@@ -59,7 +59,7 @@ fun rememberNativeAdUiWidget(
             )
             showNativeAdmob(
                 activity = activity,
-                adLayout = LayoutInfo.LayoutByName(adLayout),
+                adLayout = adLayout,
                 adKey = adKey,
                 shimmerInfo = showShimmerLayout,
                 oneTimeUse = showNewAdEveryTime,
@@ -74,12 +74,13 @@ fun rememberNativeAdUiWidget(
     return view!!
 }
 
+
 @Composable
 fun SdkNativeAd(
     activity: Activity,
     placementKey: String,
     adKey: String,
-    adLayout: String,
+    adLayout: LayoutInfo,
     modifier: Modifier = Modifier,
     showShimmerLayout: ShimmerInfo = ShimmerInfo.GivenLayout(),
     adsWidgetData: AdsWidgetData? = null,
