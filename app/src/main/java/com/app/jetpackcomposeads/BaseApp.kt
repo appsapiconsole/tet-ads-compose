@@ -22,11 +22,19 @@ class BaseApp : Application() {
         })
         SdkConfigs.setListener(
             listener = object : SdkListener {
-                override fun canLoadAd(adType: AdType, adKey: String): Boolean {
+                override fun canLoadAd(
+                    adType: AdType,
+                    placementKey: String,
+                    adKey: String
+                ): Boolean {
                     return true
                 }
 
-                override fun canShowAd(adType: AdType, adKey: String): Boolean {
+                override fun canShowAd(
+                    adType: AdType,
+                    placementKey: String,
+                    adKey: String
+                ): Boolean {
                     return true
                 }
             },
