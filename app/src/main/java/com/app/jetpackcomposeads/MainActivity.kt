@@ -23,7 +23,9 @@ import com.monetization.bannerads.BannerAdType
 import com.monetization.composeviews.SdkBanner
 import com.monetization.composeviews.SdkNativeAd
 import com.monetization.core.commons.NativeTemplates
+import com.monetization.core.ui.LayoutInfo
 import com.monetization.nativeads.AdmobNativeAdsManager
+import com.monetization.nativeads.ui.NativeAdWidget
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -51,7 +53,7 @@ class MainActivity : ComponentActivity() {
                     )
                     val native = SdkNativeAd(
                         activity = this@MainActivity,
-                        adLayout = NativeTemplates.SmallNative,
+                        adLayout = LayoutInfo.LayoutByName(NativeTemplates.SmallNative),
                         adKey = "Native",
                         placementKey = "Native1"
                     )
