@@ -45,10 +45,6 @@ dependencies {
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(platform(libs.androidx.compose.bom))
-//    implementation(libs.androidx.activity.compose)
-//    implementation(libs.ui)
-//    implementation(libs.ui.graphics)
-//    implementation(libs.ui.tooling.preview)
     implementation(libs.material3)
     implementation(libs.androidx.lifecycle.viewmodel.compose)
 

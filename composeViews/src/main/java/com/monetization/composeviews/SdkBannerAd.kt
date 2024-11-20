@@ -31,7 +31,6 @@ fun rememberBannerAdUiWidget(
     placementKey: String,
     adKey: String,
     showShimmerLayout: ShimmerInfo = ShimmerInfo.GivenLayout(),
-    bannerAdType: BannerAdType,
     requestNewOnShow: Boolean = false,
     showNewAdEveryTime: Boolean = true,
     showOnlyIfAdAvailable: Boolean = false,
@@ -54,7 +53,6 @@ fun rememberBannerAdUiWidget(
             setWidgetKey(placementKey = placementKey, adKey =  adKey, isNativeAd = false, null, true)
             showBannerAdmob(
                 activity = activity,
-                bannerAdType = bannerAdType,
                 adKey = adKey,
                 shimmerInfo = showShimmerLayout,
                 oneTimeUse = showNewAdEveryTime,
@@ -75,7 +73,6 @@ fun SdkBanner(
     activity: Activity,
     adKey: String,
     placementKey: String,
-    bannerAdType: BannerAdType,
     showShimmerLayout: ShimmerInfo = ShimmerInfo.GivenLayout(),
     showNewAdEveryTime: Boolean = true,
     requestNewOnShow: Boolean = false,
@@ -89,7 +86,6 @@ fun SdkBanner(
         activity = activity,
         placementKey = placementKey,
         adKey = adKey,
-        bannerAdType = bannerAdType,
         requestNewOnShow = requestNewOnShow,
         showShimmerLayout = showShimmerLayout,
         listener = listener,

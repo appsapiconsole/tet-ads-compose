@@ -47,7 +47,6 @@ class MainActivity : ComponentActivity() {
                     }
                     val banner = SdkBanner(
                         activity = this@MainActivity,
-                        bannerAdType = BannerAdType.Normal(BannerAdSize.AdaptiveBanner),
                         adKey = "Banner",
                         placementKey = "Native1"
                     )
@@ -60,7 +59,6 @@ class MainActivity : ComponentActivity() {
                     if (showSecondNative) {
                         val nativeTwo = SdkBanner(
                             activity = this@MainActivity,
-                            bannerAdType = BannerAdType.Normal(BannerAdSize.AdaptiveBanner),
                             adKey = "Banner",
                             placementKey = "Native2"
                         )
