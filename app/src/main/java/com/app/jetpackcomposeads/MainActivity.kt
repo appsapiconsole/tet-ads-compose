@@ -18,8 +18,6 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.app.jetpackcomposeads.ui.theme.JetpackComposeAdsTheme
 import com.monetization.adsmain.commons.addNewController
 import com.monetization.bannerads.AdmobBannerAdsManager
-import com.monetization.bannerads.BannerAdSize
-import com.monetization.bannerads.BannerAdType
 import com.monetization.composeviews.SdkBanner
 import com.monetization.composeviews.SdkNativeAd
 import com.monetization.core.commons.NativeTemplates
