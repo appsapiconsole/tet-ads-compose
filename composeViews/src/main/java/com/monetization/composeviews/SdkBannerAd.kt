@@ -50,7 +50,7 @@ fun rememberBannerAdUiWidget(
                 forBanner = true,
                 isJetpackCompose = true
             )
-            setWidgetKey(placementKey = placementKey, adKey =  adKey, isNativeAd = false, null, true)
+            setWidgetKey(placementKey = placementKey, adKey = adKey, isNativeAd = false, null, true)
             showBannerAdmob(
                 activity = activity,
                 adKey = adKey,
@@ -76,6 +76,7 @@ fun SdkBanner(
     showShimmerLayout: ShimmerInfo = ShimmerInfo.GivenLayout(),
     showNewAdEveryTime: Boolean = true,
     requestNewOnShow: Boolean = false,
+    showOnlyIfAdAvailable: Boolean = false,
     listener: UiAdsListener? = null,
     sdkBannerViewModel: OnScreenAdsViewModel = viewModel(
         factory = GenericViewModelFactory(OnScreenAdsViewModel::class.java) {
@@ -89,6 +90,7 @@ fun SdkBanner(
         requestNewOnShow = requestNewOnShow,
         showShimmerLayout = showShimmerLayout,
         listener = listener,
+        showOnlyIfAdAvailable = showOnlyIfAdAvailable,
         showNewAdEveryTime = showNewAdEveryTime,
         onScreenAdsViewModel = sdkBannerViewModel,
     ),

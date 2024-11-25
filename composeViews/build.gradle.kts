@@ -47,10 +47,7 @@ dependencies {
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.material3)
     implementation(libs.androidx.lifecycle.viewmodel.compose)
-
     api(libs.ads)
-    api(libs.remote)
-
 }
 
 

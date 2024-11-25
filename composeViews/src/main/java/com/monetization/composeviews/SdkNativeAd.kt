@@ -86,6 +86,7 @@ fun SdkNativeAd(
     adsWidgetData: AdsWidgetData? = null,
     requestNewOnShow: Boolean = false,
     showNewAdEveryTime: Boolean = true,
+    showOnlyIfAdAvailable: Boolean = false,
     listener: UiAdsListener? = null,
     onScreenAdsViewModel: OnScreenAdsViewModel = viewModel(
         factory = GenericViewModelFactory(OnScreenAdsViewModel::class.java) {
@@ -101,6 +102,7 @@ fun SdkNativeAd(
         showShimmerLayout = showShimmerLayout,
         listener = listener,
         showNewAdEveryTime = showNewAdEveryTime,
+        showOnlyIfAdAvailable = showOnlyIfAdAvailable,
         onScreenAdsViewModel = onScreenAdsViewModel,
         adsWidgetData = adsWidgetData
     ),

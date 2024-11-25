@@ -23,15 +23,10 @@ import com.monetization.adsmain.splash.AdmobSplashAdController
 
 @Composable
 fun InterstitialDialog(
-//    onDismiss: () -> Unit,
-    bgColor: Color = Color.Transparent,
-    textColor: Color = Color.White,
-    progressColor: Color = Color.Green,
-    trackColor: Color = Color.Gray,
+    textColor: Color = Color.White
 ) {
     Dialog(
         onDismissRequest = {
-//            onDismiss.invoke()
         }, properties = DialogProperties(
             dismissOnBackPress = false,
             dismissOnClickOutside = false,
