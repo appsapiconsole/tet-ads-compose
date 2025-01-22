@@ -27,7 +27,7 @@ ui = { module = "androidx.compose.ui:ui" }
 ui-graphics = { module = "androidx.compose.ui:ui-graphics" }
 ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview" }
 material3 = { module = "androidx.compose.material3:material3" }
-ads = { module = "com.github.appsapiconsole:tet-ads-xml", version = "0.0.14-alpha08" }
+ads = { module = "com.github.appsapiconsole:tet-ads-xml", version = "0.0.17-beta01" }
 remote = { module = "com.github.appsapiconsole:tet-remote-config", version = "0.0.2" }
 androidx-lifecycle-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version= "2.8.7" }
 androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
