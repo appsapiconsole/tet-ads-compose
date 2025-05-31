@@ -23,7 +23,6 @@ import com.monetization.composeviews.SdkNativeAd
 import com.monetization.core.commons.NativeTemplates
 import com.monetization.core.ui.LayoutInfo
 import com.monetization.nativeads.AdmobNativeAdsManager
-import com.monetization.nativeads.ui.NativeAdWidget
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -48,14 +47,14 @@ class MainActivity : ComponentActivity() {
                         adKey = "Banner",
                         placementKey = "Native1"
                     )
-                    val native = SdkNativeAd(
+                    SdkNativeAd(
                         activity = this@MainActivity,
                         adLayout = LayoutInfo.LayoutByName(NativeTemplates.SmallNative),
                         adKey = "Native",
                         placementKey = "Native1"
                     )
                     if (showSecondNative) {
-                        val nativeTwo = SdkBanner(
+                        SdkBanner(
                             activity = this@MainActivity,
                             adKey = "Banner",
                             placementKey = "Native2"

@@ -24,6 +24,8 @@ import com.monetization.core.listeners.UiAdsListener
 import com.monetization.core.ui.AdsWidgetData
 import com.monetization.core.ui.LayoutInfo
 import com.monetization.core.ui.ShimmerInfo
+import com.monetization.nativeads.populate.NativePopulator
+import com.monetization.nativeads.populate.NativePopulatorImpl
 
 @Composable
 fun rememberNativeAdUiWidget(
@@ -42,6 +44,7 @@ fun rememberNativeAdUiWidget(
         }
     ),
     listener: UiAdsListener? = null,
+    populator: NativePopulator
 ): AdsUiWidget {
     val lifecycleOwner = LocalSavedStateRegistryOwner.current
     val state by onScreenAdsViewModel.state.collectAsState()
@@ -65,7 +68,8 @@ fun rememberNativeAdUiWidget(
                 oneTimeUse = showNewAdEveryTime,
                 requestNewOnShow = requestNewOnShow,
                 listener = listener,
-                showOnlyIfAdAvailable = showOnlyIfAdAvailable
+                showOnlyIfAdAvailable = showOnlyIfAdAvailable,
+                populator = populator
             )
         }
     } else {
@@ -88,6 +92,7 @@ fun SdkNativeAd(
     showNewAdEveryTime: Boolean = true,
     showOnlyIfAdAvailable: Boolean = false,
     listener: UiAdsListener? = null,
+    populator: NativePopulator = NativePopulatorImpl(),
     onScreenAdsViewModel: OnScreenAdsViewModel = viewModel(
         factory = GenericViewModelFactory(OnScreenAdsViewModel::class.java) {
             OnScreenAdsViewModel()
@@ -104,7 +109,8 @@ fun SdkNativeAd(
         showNewAdEveryTime = showNewAdEveryTime,
         showOnlyIfAdAvailable = showOnlyIfAdAvailable,
         onScreenAdsViewModel = onScreenAdsViewModel,
-        adsWidgetData = adsWidgetData
+        adsWidgetData = adsWidgetData,
+        populator = populator
     ),
 ): AdsUiWidget {
     val lifecycleOwner = LocalSavedStateRegistryOwner.current
